@@ -22,5 +22,5 @@ jobs:
           key: ${{ github.ref }}
           path: .cache
       - run: npm i
-      - run: npm build
-      - run: npm deploy
+      - run: npm run build
+      - run: npm run deploy
