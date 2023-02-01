@@ -23,8 +23,8 @@ jobs:
           path: .cache
       - name: Deploy with gh-pages
         run: |
-          git config --global user.email "Roman Sotnikov"
-          git config --global user.name "axeman.ofic@gmail.com"
+          git config --global user.email "axeman.ofic@gmail.com"
+          git config --global user.name "Roman Sotnikov"
           npm i
           npm run build
           npm run deploy
