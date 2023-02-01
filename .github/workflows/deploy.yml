@@ -23,8 +23,9 @@ jobs:
           path: .cache
       - name: Deploy with gh-pages
         run: |
-          git config --global user.email "axeman.ofic@gmail.com"
-          git config --global user.name "Roman Sotnikov"
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           npm i
           npm run build
-          npm run deploy
+          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
