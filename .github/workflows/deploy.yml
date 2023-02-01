@@ -21,6 +21,10 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: npm i
-      - run: npm run build
-      - run: npm run deploy
+      - name: Deploy with gh-pages
+        run: |
+          git config --global user.email "Roman Sotnikov"
+          git config --global user.name "axeman.ofic@gmail.com"
+          npm i
+          npm run build
+          npm run deploy
