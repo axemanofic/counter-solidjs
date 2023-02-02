@@ -39,7 +39,7 @@
     transform: translateY(-2px);
 }
 
-.button-27:active {
+.button:active {
     box-shadow: none;
     transform: translateY(0);
 }
